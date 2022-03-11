@@ -5,23 +5,24 @@ import HelloWorld from '@/components/HelloWorld.vue'
 
 
 <template class="container">
-  <header class="row navbar navbar-expand-lg navbar-light bg-light" >
-    <img alt="Vue logo" class="col-2" src="@/assets/logo.svg" width="125" height="125" />
+  <header class="row navbar navbar-expand-lg navbar-light bg-light fixed-top" >
+    <img alt="Vue logo" class="col-lg-2 " src="@/assets/logo.svg" width="125" height="125" />
 
 
-    <h1 class="col-2">Lesní blog</h1>
+    <h1 class="col-lg-2">Lesní blog</h1>
 
-    <nav class="col-2">
+    <nav class="col-6">
       <div class="container-fluid">
         <div class="row">
-        <RouterLink class="col-4 nav-item btn btn-success p-3 m-3" to="/">Home</RouterLink>
-        <RouterLink class="col-4 nav-item btn btn-success p-3 m-3" to="/about">About</RouterLink>
+        <RouterLink class="col-3 container-fluid nav-item btn btn-success p-3 m-3" to="/">Home</RouterLink>
+        <RouterLink class="col-3 container-fluid nav-item btn btn-success p-3 m-3" to="/about">About</RouterLink>
         </div>
       </div>
     </nav>
 
   </header>
-  
+
+  <div class="row pt-5"></div>
   <div class="row cs_header"></div>
 
 
@@ -32,7 +33,8 @@ import HelloWorld from '@/components/HelloWorld.vue'
   .cs_header {
     background-image: url("https://images.fineartamerica.com/images-medium-large-5/deep-forest-steve-gadomski.jpg");
     background-position:  top center ;
-    height: 30vh;
+    height: 40vh;
+    margin-top:;
   }
 </style>
 

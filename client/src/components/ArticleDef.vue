@@ -18,14 +18,14 @@ defineProps({
 
 </script>
 
-<template class="container">
-  <div class="col-12 d-grid gap-5">
-    <h3 class="text-center">{{ title1 }}</h3>
+<template>
+  <div>
+    <h3 class="col-1">{{ title1 }}</h3>
       <span>
-          <img  src = "{{picture_in}}" class="rounded mx-auto d-block img-fluid">
+          <img  :src = "picture_in" class="rounded mx-auto d-block img-fluid col-2 float-start  ">
       </span>
       <span class="fw-light">
-        <div class="ps-5">
+        <div class="ps-5 col-9 float-end">
           {{ msg }}
         </div>
       </span>
@@ -37,3 +37,8 @@ export default {
   name: "ArticleDef"
 }
 </script>
+
+<style>
+
+
+</style>
