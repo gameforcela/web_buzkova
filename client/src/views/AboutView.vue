@@ -1,15 +1,17 @@
-<template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
-</template>
+<script>
+import ArticleDef from "@/components/ArticleDef.vue";
 
-<style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
+export default {
+  components: {
+    ArticleDef
   }
 }
-</style>
+
+</script>
+<template >
+  <div  class="p-3 mb-2 bg-dark text-white bg-opacity-80">
+
+    <ArticleDef msg = "afgdfsvsvsedv" title1="O NÁS" picture_in="public\favicon.ico"> </ArticleDef>
+
+  </div>
+</template>
