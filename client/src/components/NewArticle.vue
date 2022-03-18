@@ -27,7 +27,7 @@
       </div>
     </div>
     <div class="card-footer">
-      <button type="button" class="btn float-end btn-primary"><em class="bi-check"/></button>
+      <button type="button" class="btn float-end btn-primary"><em class="bi-check"/>Odeslat</button>
     </div>
   </div>
 </template>

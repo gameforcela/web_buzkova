@@ -11,7 +11,7 @@ export default {
 <template >
   <div  class="p-3 mb-2 bg-dark text-white bg-opacity-80 row">
 
-    <ArticleDef msg = "afgdfsvsvsedv" title1="O NÁS" picture_in="public\favicon.ico"> </ArticleDef>
+    <ArticleDef text = "afgdfsvsvsedv" title="O NÁS" image="public\favicon.ico"> </ArticleDef>
 
   </div>
 </template>
