@@ -1,15 +1,19 @@
 <script setup>
 defineProps({
-  msg: {
+  text: {
     type: String,
     required: true
   },
-  title1: {
+  title: {
     type: String,
     required: true
   },
-  picture_in: {
+  image: {
     type: String,
+    required: true
+  },
+  date: {
+    type: Date,
     required: true
   }
 
@@ -20,13 +24,14 @@ defineProps({
 
 <template>
   <div>
-    <h3 class="col-1">{{ title1 }}</h3>
+    <h3 class="col-1">{{ title }}</h3>
+    <h6 class="col-1">{{date}}</h6>
       <span>
-          <img  :src = "picture_in" class="rounded mx-auto d-block img-fluid col-2 float-start  ">
+          <img  :src = "image" class="rounded mx-auto d-block img-fluid col-2 float-start  ">
       </span>
       <span class="fw-light">
         <div class="ps-5 col-9 float-end">
-          {{ msg }}
+          {{ text }}
         </div>
       </span>
   </div>

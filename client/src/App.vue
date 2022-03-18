@@ -16,6 +16,7 @@ import HelloWorld from '@/components/HelloWorld.vue'
         <div class="row">
         <RouterLink class="col-3 container-fluid nav-item btn btn-success p-3 m-3" to="/">Home</RouterLink>
         <RouterLink class="col-3 container-fluid nav-item btn btn-success p-3 m-3" to="/about">About</RouterLink>
+        <RouterLink class="col-3 container-fluid nav-item btn btn-success p-3 m-3" to="/new-article">New Article</RouterLink>
         </div>
       </div>
     </nav>
@@ -34,7 +35,6 @@ import HelloWorld from '@/components/HelloWorld.vue'
     background-image: url("https://images.fineartamerica.com/images-medium-large-5/deep-forest-steve-gadomski.jpg");
     background-position:  top center ;
     height: 40vh;
-    margin-top:;
   }
 </style>
 

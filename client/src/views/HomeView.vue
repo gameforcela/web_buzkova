@@ -4,17 +4,38 @@ import { RouterLink, RouterView } from 'vue-router';
 import ArticleDef from "@/components/ArticleDef.vue";
 
 export default {
-  components: {
-    ArticleDef
-  },
+  components: {ArticleDef},
   data() {
     return {
-      count: 1
-    }
-  },
-  methods: {
-    onClick() {
-      this.count++;
+      articles: [
+        {
+          image: 'https://picsum.photos/seed/picsum/500',
+          title: "Title",
+          date: new Date(),
+          text: `Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam egestas wisi a erat.
+Integer tempor. Pellentesque ipsum. Integer malesuada. Vestibulum fermentum tortor id mi. Aenean placerat.
+Pellentesque arcu. Phasellus rhoncus.
+`
+        },
+        {
+          image: 'https://picsum.photos/seed/picsum/500',
+          title: "Title",
+          date: new Date(),
+          text: `Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam egestas wisi a erat.
+Integer tempor. Pellentesque ipsum. Integer malesuada. Vestibulum fermentum tortor id mi. Aenean placerat.
+Pellentesque arcu. Phasellus rhoncus.
+`
+        },
+        {
+          image: 'https://picsum.photos/seed/picsum/500',
+          title: "Title",
+          date: new Date(),
+          text: `Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam egestas wisi a erat.
+Integer tempor. Pellentesque ipsum. Integer malesuada. Vestibulum fermentum tortor id mi. Aenean placerat.
+Pellentesque arcu. Phasellus rhoncus.
+`
+        },
+      ]
     }
   }
 }
@@ -22,42 +43,10 @@ export default {
 
 <template>
   <main class="p-3 mb-2 bg-dark text-white bg-opacity-80 d-grid gap-5">
-    <button type="button" @click="onClick" class="btn btn-success">Count: {{ count }}</button>
-    <div class="position-relative offset-1 row-cols-7 p-3 mb-2 bg-success">
-      <ArticleDef msg="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam erat volutpat.
-            Integer pellentesque quam vel velit. Temporibus autem quibusdam et aut officiis debitis aut
-            rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.
-            Praesent dapibus. Phasellus et lorem id felis nonummy placerat. Sed ut perspiciatis unde omnis iste
-            natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
-            inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nam quis nulla. Phasellus faucibus
-            molestie nisl. Pellentesque pretium lectus id turpis. In rutrum. Aenean id metus id velit ullamcorper pulvinar.
-            Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non
-            numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Aliquam id dolor.
-            Etiam ligula pede, sagittis quis, interdum ultricies, scelerisque eu. Integer pellentesque quam vel velit." title1="ČLÁNEK PRVNÍ" picture_in='https://cdn.megapixel.cz/gallery/w1380h900/1/197071.jpg?v=1452278254'> </ArticleDef>
+
+    <div class="position-relative offset-1 row-cols-7 p-3 mb-2 bg-success" v-for="article in articles">
+      <ArticleDef :title="article.title" :date="article.date" :text="article.text" :image="article.image"></ArticleDef>
       <RouterLink class="position-absolute top-100 start-50 translate-middle mt-4 btn btn-success" to="/article">Číst dále</RouterLink>
     </div>
-
-    <div class="position-relative offset-1 row-cols-7 p-3 mb-2 bg-success">
-      <ArticleDef msg = "tesque quam vel velit. Temporibus autem quibusdam et aut officiis debitis aut
-        rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.
-        Praesent dapibus. Phasellus et lorem id felis nonummy placerat. Sed ut perspiciatis unde omnis iste
-        natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
-        inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nam quis nulla. Phasellus faucibus
-        molestie nisl. Pellentesque pretium lectus id turpis. In rutrum. Aenean id metus id velit ullamcorper pulvinar.
-        Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetu" title1="ČLÁNEK DRUHÝ" picture_in = 'https://blog.inpage.cz/obrazek/3/kitten-jpg/'> </ArticleDef>
-      <RouterLink class="position-absolute top-100 start-50 translate-middle mt-4 btn btn-success" to="/article">Číst dále</RouterLink>
-
-    </div>
-
-    <div class="position-relative offset-1 row-cols-7 p-3 mb-2 bg-success">
-      <ArticleDef msg = "tesque quam vel velit. Temporibus autem quibusdam et aut officiis debitis aut
-        rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.
-        Praesent dapibus. Phasellus et lorem id felis nonummy placerat. Sed ut perspiciatis unde omnis iste
-        natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
-        inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nam quis nulla. Phasellus faucibus
-        molestie nisl. Pellentesque pretium lectus id turpis. In rutrum. Aenean id metus id velit ullamcorper pulvinar.
-        Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetu" title1="ČLÁNEK TŘETÍ" picture_in = 'https://wallpaperaccess.com/full/2909568.jpg'> </ArticleDef>
-      <RouterLink class="position-absolute top-100 start-50 translate-middle mt-4 btn btn-success" to="/article">Číst dále</RouterLink>
-    </div>
-  </main>
+   </main>
 </template>
