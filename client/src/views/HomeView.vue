@@ -1,5 +1,4 @@
 <script>
-import TheWelcome from '@/components/TheWelcome.vue';
 import { RouterLink, RouterView } from 'vue-router';
 import ArticleDef from "@/components/ArticleDef.vue";
 
