@@ -27,7 +27,7 @@
       </div>
     </div>
     <div class="card-footer">
-      <button type="button" class="btn float-end btn-primary"><em class="bi-check"/>Odeslat</button>
+      <button type="submit" class="btn float-end btn-primary" ><em class="bi-check"/>Odeslat</button>
     </div>
   </div>
 </template>
@@ -49,7 +49,10 @@ export default {
       // TODO parse image
     },
     send() {
-      //this.$http.post(this.article)
+      fetch('http://localhost:3000/articles',{
+        method: 'POST',
+        body: JSON.stringify(this.article)
+      })
     }
   }
 }
