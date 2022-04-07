@@ -39,8 +39,10 @@ defineProps({
 
 <script>
 export default {
-  name: "ArticleDef"
+  name: "ArticleDef",
+
 }
+
 </script>
 
 <style>

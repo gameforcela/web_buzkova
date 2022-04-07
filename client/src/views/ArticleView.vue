@@ -17,14 +17,14 @@ export default {
       }
     }
   },
-
   async mounted() {
     const id = this.$route.params.id;
     this.article = await this.getData(id);
   },
   methods: {
     async getData(id){
-
+      const res = await fetch(`http://localhost:3000/articles/${id}`,{method: 'GET'});
+      return res.json();
     }
   }
 }
@@ -32,7 +32,7 @@ export default {
 <template >
   <div  class="p-3 mb-2 bg-dark text-white bg-opacity-80 position-relative row">
 
-      <ArticleDef text = "Lorem ipsum dolor sit ame" :title = "article.id" image="https://wallpaperaccess.com/full/2909568.jpg"> </ArticleDef>
+      <ArticleDef :text = "article.text" :title = "article.title" :image="article.image"> </ArticleDef>
       <RouterLink class="position-absolute top-100 start-50 translate-middle mt-4 btn btn-success" to="/">Zpět</RouterLink>
 
   </div>
